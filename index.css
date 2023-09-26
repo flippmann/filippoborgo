@@ -172,6 +172,6 @@ body.light h2 {
 .aboutme-title {
 	position: relative;
 	top: 10%;
-	right: 20%;
-	transform: translate(-20%, -10%);
+	left: -15%;
+	transform: translate(15%, -10%);
 }
