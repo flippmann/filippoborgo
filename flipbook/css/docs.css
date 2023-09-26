@@ -1,9 +1,17 @@
 /* Docs sample */
 
-body {
+· {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	min-height: 100vh;
 }
 
 #canvas {
