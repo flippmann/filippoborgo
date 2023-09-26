@@ -238,11 +238,6 @@ h2 {
 
 }
 
-body.light h2 {
-	color: white;
-
-}
-
 a {
 	color: black;
 	text-decoration: none !important;
@@ -254,6 +249,9 @@ body.light a {
 	color: white;
 	text-decoration: none !important;
 	pointer-events: auto;
+	animation-name: colorAnimation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 
 .work-title {
@@ -268,4 +266,52 @@ body.light a {
 	top: 10%;
 	left: -15%;
 	transform: translate(15%, -10%);
+}
+
+h5 {
+	font-family: Krungthep;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+.light-description {
+	position: absolute;
+	top: 73%;
+	left: 50%;
+	transform: translate(-50%, -73%);
+}
+
+body.light h5 {
+	color: black;
+}
+
+h6 {
+	font-family: Krungthep;
+	font-size: 15px;
+	color: black;
+	text-align: center;
+}
+
+.authors {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+}
+
+body.light h6 {
+	animation-name: colorAnimation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes colorAnimation {
+	from {
+		color: black;
+	}
+
+	to {
+		color: white;
+	}
 }
