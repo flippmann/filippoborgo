@@ -12,9 +12,9 @@ body {
 	min-height: 100vh;
 }
 
-body.light {
+/*body.light {
 	background: radial-gradient(#555, #111);
-}
+}*/
 
 
 
@@ -122,33 +122,76 @@ body.light .bulb span:nth-child(2) {
 }
 
 
-label input {
+/* Hide default HTML checkbox */
+.switch input {
 	appearance: none;
 }
 
-label {
+/* The switch - the box around the slider */
+.switch {
 	position: absolute;
 	top: 80%;
 	left: 50%;
-	transform: translate(-50%, 80%);
-	width: 90px;
-	height: 40px;
-	background: #212121;
-	border: 6px solid #212121;
-	border-radius: 14px;
+	transform: translate(-50%, -80%);
+	width: 150px;
+	height: 50px;
+	background: white;
 }
 
-label span {
+.slider {
 	position: absolute;
+	cursor: pointer;
 	top: 0;
 	left: 0;
-	width: 40px;
-	height: 40px;
-	background: #333;
-	border: 6px solid #212121;
-	border-radius: 14px;
-	cursor: pointer;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: 0.5s;
 	transition: 0.5s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	top: 5%;
+	left: 5%;
+	width: 45px;
+	height: 45px;
+	background: black;
+	border-radius: 50%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	transform: translateX(200%);
+}
+
+
+.slider:after {
+	content: 'ON';
+	color: red;
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 70%;
+	font-size: 20px;
+	font-family: Krungthep;
+	transition: none;
+}
+
+input:checked+.slider:after {
+	content: 'OFF';
+	color: red;
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	font-size: 20px;
+	font-family: Krungthep;
+	transition: none;
 }
 
 
