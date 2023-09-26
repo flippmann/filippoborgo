@@ -17,7 +17,7 @@ body {
 }*/
 
 
-
+/*----------LIGHT BULB----------*/
 
 .bulb {
 	position: absolute;
@@ -114,13 +114,14 @@ body.light .bulb span:nth-child(2) {
 .wire {
 	position: absolute;
 	left: calc(50% - 2px);
-	bottom: 50%;
+	bottom: 60%;
 	width: 4px;
-	height: 60vh;
+	height: 40vh;
 	background: #121212;
 	z-index: 1;
 }
 
+/*----------SWITCH----------*/
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -134,8 +135,10 @@ body.light .bulb span:nth-child(2) {
 	left: 50%;
 	transform: translate(-50%, -80%);
 	width: 150px;
-	height: 50px;
-	background: white;
+	height: 55px;
+	border-radius: 34px;
+	border: 5px solid white;
+	background: black;
 }
 
 .slider {
@@ -146,19 +149,21 @@ body.light .bulb span:nth-child(2) {
 	right: 0;
 	bottom: 0;
 	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
 	transition: 0.5s;
 }
 
 .slider:before {
 	position: absolute;
 	content: "";
-	top: 5%;
+	top: 8%;
 	left: 5%;
 	width: 45px;
 	height: 45px;
-	background: black;
+	background: white;
 	border-radius: 50%;
 	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
 	transition: 0.5s;
 }
 
@@ -169,40 +174,81 @@ input:checked+.slider:before {
 	transform: translateX(200%);
 }
 
-
-.slider:after {
-	content: 'ON';
+.text {
 	color: red;
+	font-size: 20px;
+	font-family: Krungthep;
+}
+
+
+.text:after {
+	content: 'ON';
 	display: block;
 	position: absolute;
 	top: 25%;
 	left: 70%;
-	font-size: 20px;
-	font-family: Krungthep;
-	transition: none;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+
 }
 
-input:checked+.slider:after {
+.text:before {
 	content: 'OFF';
-	color: red;
 	display: block;
 	position: absolute;
 	top: 25%;
 	left: 15%;
-	font-size: 20px;
-	font-family: Krungthep;
-	transition: none;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out
 }
 
 
+input+.slider+.text:after {
+	opacity: 1;
+}
+
+input+.slider+.text:before {
+	opacity: 0;
+}
+
+
+input:checked+.slider+.text:after {
+	opacity: 0;
+}
+
+input:checked+.slider+.text:before {
+	opacity: 1;
+}
+
+
+
+/*----------HEADERS----------*/
 
 h2 {
 	font-family: Krungthep;
 	font-size: 100px;
+	color: black;
+
 }
 
 body.light h2 {
 	color: white;
+
+}
+
+a {
+	color: black;
+	text-decoration: none !important;
+	pointer-events: none;
+	/* Make links not clickable*/
+}
+
+body.light a {
+	color: white;
+	text-decoration: none !important;
+	pointer-events: auto;
 }
 
 .work-title {
