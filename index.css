@@ -18,8 +18,12 @@ body.light {
 
 
 
+
 .bulb {
-	position: relative;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, 40%);
 	width: 80px;
 	height: 80px;
 	background: #444;
@@ -32,7 +36,10 @@ body.light .bulb {
 	box-shadow: 0 0 50px white,
 		0 0 100px white,
 		0 0 150px white,
-		0 0 200px white;
+		0 0 200px white,
+		0 0 250px white,
+		0 0 350px white,
+		0 0 450px white;
 }
 
 .bulb::before {
@@ -121,9 +128,9 @@ label input {
 
 label {
 	position: absolute;
-	top: 50%;
+	top: 80%;
 	left: 50%;
-	transform: translate(-50%, 150%);
+	transform: translate(-50%, 80%);
 	width: 90px;
 	height: 40px;
 	background: #212121;
@@ -142,4 +149,29 @@ label span {
 	border-radius: 14px;
 	cursor: pointer;
 	transition: 0.5s;
+}
+
+
+
+h2 {
+	font-family: Krungthep;
+	font-size: 100px;
+}
+
+body.light h2 {
+	color: white;
+}
+
+.work-title {
+	position: relative;
+	top: 20%;
+	left: 20%;
+	transform: translate(-20%, -20%);
+}
+
+.aboutme-title {
+	position: relative;
+	top: 10%;
+	right: 20%;
+	transform: translate(-20%, -10%);
 }
