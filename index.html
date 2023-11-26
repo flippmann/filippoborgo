@@ -45,17 +45,24 @@
 		let check_box = document.querySelector('.btn');
 		let body = document.querySelector('body');
 
-		if (check_box.checked == true) {
-			body.classList.toggle('light');
+		// Load the light mode state from localStorage
+		let lightMode = localStorage.getItem('lightMode');
+
+		// Apply the light mode if it was enabled
+		if (lightMode === 'enabled') {
+			body.classList.add('light');
+			check_box.checked = true;
 		} else {
-			body.classList.toggle('nolight');
+			body.classList.add('nolight');
 		}
 
 		check_box.onchange = function () {
-			if (check_box.checked == true) {
+			if (check_box.checked) {
 				body.classList.replace('nolight', 'light');
+				localStorage.setItem('lightMode', 'enabled');
 			} else {
 				body.classList.replace('light', 'nolight');
+				localStorage.setItem('lightMode', 'disabled');
 			}
 		}
 	</script>
