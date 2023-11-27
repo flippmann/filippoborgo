@@ -211,6 +211,12 @@ a {
 .e-mail {
 	position: relative;
 	top: -80%;
+	left: 0%;
+}
+
+.e-mail-invisible {
+	position: relative;
+	top: -115%;
 	width: 600px;
 	height: 400px;
 	z-index: 9999;
